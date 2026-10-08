@@ -41,6 +41,28 @@
             android:exported="false"
             android:label="Módulo del Sistema" />
 
+        <activity
+            android:name=".AsignaturasActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CrearAsignaturaActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".EstudiantesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CrearEstudianteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DocentesActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".CrearDocenteActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

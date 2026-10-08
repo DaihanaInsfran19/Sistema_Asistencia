@@ -21,17 +21,25 @@ class MainActivity : AppCompatActivity() {
         val cardCursos = findViewById<MaterialCardView>(R.id.cardCursos)
         val cardAsistencias = findViewById<MaterialCardView>(R.id.cardAsistencias)
         val cardConsultas = findViewById<MaterialCardView>(R.id.cardConsultas)
+        val cardDocentes = findViewById<MaterialCardView>(R.id.cardDocentes)
 
         // Módulo 1: Estudiantes
         cardEstudiantes.setOnClickListener {
-            openDetail("Módulo Estudiantes", "Gestión de alumnos, datos institucionales y estados de matrícula.")
+            val intent = Intent(
+                this,
+                EstudiantesActivity::class.java
+            )
+            startActivity(intent)
         }
 
         // Módulo 2: Asignaturas
         cardAsignaturas.setOnClickListener {
-            openDetail("Módulo Asignaturas", "Administración de materias, códigos y planes de estudio.")
+            val intent = Intent(
+                this,
+                AsignaturasActivity::class.java
+            )
+            startActivity(intent)
         }
-
         // Módulo 3: Cursos y Clases
         cardCursos.setOnClickListener {
             openDetail("Módulo Cursos y Clases", "Programación de clases, horarios y tolerancia de asistencia.")
@@ -46,6 +54,14 @@ class MainActivity : AppCompatActivity() {
         // Módulo 5: Consultas y Reportes
         cardConsultas.setOnClickListener {
             openDetail("Módulo Consultas y Reportes", "Consulta histórica de asistencias, ausencias y llegadas tardías por QR.")
+        }
+        // Módulo Docentes
+        cardDocentes.setOnClickListener {
+            val intent = Intent(
+                this,
+                DocentesActivity::class.java
+            )
+            startActivity(intent)
         }
     }
 
